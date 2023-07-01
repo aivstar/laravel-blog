@@ -1,6 +1,6 @@
 <?php
 
-namespace AivstarBlog;
+namespace BinshopsBlog;
 
 use BinshopsBlog\Models\BinshopsPostTranslation;
 use Illuminate\Support\ServiceProvider;
@@ -12,7 +12,7 @@ use BinshopsBlog\Laravel\Fulltext\ModelObserver;
 use BinshopsBlog\Laravel\Fulltext\Search;
 use BinshopsBlog\Laravel\Fulltext\SearchInterface;
 
-class AivstarBlogServiceProvider extends ServiceProvider
+class BinshopsBlogServiceProvider extends ServiceProvider
 {
 
     protected $commands = [
