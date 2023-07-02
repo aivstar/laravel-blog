@@ -1,6 +1,6 @@
 <?php
 
-namespace BinshopsBlog;
+namespace AivstarBlog;
 
 use BinshopsBlog\Models\BinshopsPostTranslation;
 use Illuminate\Support\ServiceProvider;
