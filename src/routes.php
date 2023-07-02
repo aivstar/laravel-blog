@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['middleware' => ['web'], 'namespace' => '\BinshopsBlog\Controllers'], function () {
+Route::group(['middleware' => ['web'], 'namespace' => '\AivstarBlog\Controllers'], function () {
 
     /** The main public facing blog routes - show all posts, view a category, view a single post, also the add comment route */
     Route::group(['prefix' => "/{locale}/".config('binshopsblog.blog_prefix', 'blog')], function () {
