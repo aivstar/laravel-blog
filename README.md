@@ -13,7 +13,7 @@ php artisan ui vue --auth
 ```
 已安装以上组件则直接输入以下命令：
 
-`composer require binshops/laravel-blog`
+`composer require aivstar/laravel-blog`
 
 
 
