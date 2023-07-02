@@ -1,15 +1,15 @@
 <?php
 
 
-namespace BinshopsBlog\Controllers;
+namespace AivstarBlog\Controllers;
 
 use App\Http\Controllers\Controller;
-use BinshopsBlog\Models\BinshopsConfiguration;
+use AivstarBlog\Models\BinshopsConfiguration;
 use Illuminate\Http\Request;
-use BinshopsBlog\Helpers;
-use BinshopsBlog\Middleware\LoadLanguage;
-use BinshopsBlog\Middleware\UserCanManageBlogPosts;
-use BinshopsBlog\Models\BinshopsLanguage;
+use AivstarBlog\Helpers;
+use AivstarBlog\Middleware\LoadLanguage;
+use AivstarBlog\Middleware\UserCanManageBlogPosts;
+use AivstarBlog\Models\BinshopsLanguage;
 
 class BinshopsLanguageAdminController extends Controller
 {

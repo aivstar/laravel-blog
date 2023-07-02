@@ -1,13 +1,13 @@
 <?php
 
-namespace BinshopsBlog\Controllers;
+namespace AivstarBlog\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use BinshopsBlog\Helpers;
-use BinshopsBlog\Middleware\UserCanManageBlogPosts;
-use BinshopsBlog\Models\BinshopsConfiguration;
-use BinshopsBlog\Models\BinshopsLanguage;
+use AivstarBlog\Helpers;
+use AivstarBlog\Middleware\UserCanManageBlogPosts;
+use AivstarBlog\Models\BinshopsConfiguration;
+use AivstarBlog\Models\BinshopsLanguage;
 
 /**
  * Class BinshopsAdminSetupController

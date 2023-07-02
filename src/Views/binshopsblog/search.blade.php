@@ -12,7 +12,7 @@
                         @if(isset($result->indexable))
                             @php $search_count += $search_count + 1; @endphp
                             <?php $post = $result->indexable; ?>
-                            @if($post && is_a($post,\BinshopsBlog\Models\BinshopsPostTranslation::class))
+                            @if($post && is_a($post,\AivstarBlog\Models\BinshopsPostTranslation::class))
                                 <h2>Search result #{{$search_count}}</h2>
                                 @include("binshopsblog::partials.index_loop")
                             @else

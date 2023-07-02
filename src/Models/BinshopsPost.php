@@ -1,13 +1,13 @@
 <?php
 
-namespace BinshopsBlog\Models;
+namespace AivstarBlog\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use BinshopsBlog\Scopes\BinshopsBlogPublishedScope;
+use AivstarBlog\Scopes\BinshopsBlogPublishedScope;
 
 /**
  * Class BinshopsPost
- * @package BinshopsBlog\Models
+ * @package AivstarBlog\Models
  */
 class BinshopsPost extends Model
 {

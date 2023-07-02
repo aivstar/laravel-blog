@@ -1,19 +1,19 @@
 <?php
 
-namespace BinshopsBlog\Controllers;
+namespace AivstarBlog\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use BinshopsBlog\Middleware\LoadLanguage;
-use BinshopsBlog\Middleware\UserCanManageBlogPosts;
-use BinshopsBlog\Models\BinshopsUploadedPhoto;
+use AivstarBlog\Middleware\LoadLanguage;
+use AivstarBlog\Middleware\UserCanManageBlogPosts;
+use AivstarBlog\Models\BinshopsUploadedPhoto;
 use File;
-use BinshopsBlog\Requests\UploadImageRequest;
-use BinshopsBlog\Traits\UploadFileTrait;
+use AivstarBlog\Requests\UploadImageRequest;
+use AivstarBlog\Traits\UploadFileTrait;
 
 /**
  * Class BinshopsAdminController
- * @package BinshopsBlog\Controllers
+ * @package AivstarBlog\Controllers
  */
 class BinshopsImageUploadController extends Controller
 {

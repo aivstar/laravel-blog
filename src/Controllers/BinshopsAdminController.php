@@ -1,32 +1,32 @@
 <?php
 
-namespace BinshopsBlog\Controllers;
+namespace AivstarBlog\Controllers;
 
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use BinshopsBlog\Interfaces\BaseRequestInterface;
-use BinshopsBlog\Events\BlogPostAdded;
-use BinshopsBlog\Events\BlogPostEdited;
-use BinshopsBlog\Events\BlogPostWillBeDeleted;
-use BinshopsBlog\Helpers;
-use BinshopsBlog\Middleware\LoadLanguage;
-use BinshopsBlog\Middleware\PackageSetup;
-use BinshopsBlog\Middleware\UserCanManageBlogPosts;
-use BinshopsBlog\Models\BinshopsCategoryTranslation;
-use BinshopsBlog\Models\BinshopsLanguage;
-use BinshopsBlog\Models\BinshopsPost;
-use BinshopsBlog\Models\BinshopsPostTranslation;
-use BinshopsBlog\Models\BinshopsUploadedPhoto;
-use BinshopsBlog\Requests\CreateBinshopsBlogPostRequest;
-use BinshopsBlog\Requests\CreateBinshopsPostToggleRequest;
-use BinshopsBlog\Requests\DeleteBinshopsBlogPostRequest;
-use BinshopsBlog\Requests\UpdateBinshopsBlogPostRequest;
-use BinshopsBlog\Traits\UploadFileTrait;
+use AivstarBlog\Interfaces\BaseRequestInterface;
+use AivstarBlog\Events\BlogPostAdded;
+use AivstarBlog\Events\BlogPostEdited;
+use AivstarBlog\Events\BlogPostWillBeDeleted;
+use AivstarBlog\Helpers;
+use AivstarBlog\Middleware\LoadLanguage;
+use AivstarBlog\Middleware\PackageSetup;
+use AivstarBlog\Middleware\UserCanManageBlogPosts;
+use AivstarBlog\Models\BinshopsCategoryTranslation;
+use AivstarBlog\Models\BinshopsLanguage;
+use AivstarBlog\Models\BinshopsPost;
+use AivstarBlog\Models\BinshopsPostTranslation;
+use AivstarBlog\Models\BinshopsUploadedPhoto;
+use AivstarBlog\Requests\CreateBinshopsBlogPostRequest;
+use AivstarBlog\Requests\CreateBinshopsPostToggleRequest;
+use AivstarBlog\Requests\DeleteAivstarBlogPostRequest;
+use AivstarBlog\Requests\UpdateBinshopsBlogPostRequest;
+use AivstarBlog\Traits\UploadFileTrait;
 
 /**
  * Class BinshopsAdminController
- * @package BinshopsBlog\Controllers
+ * @package AivstarBlog\Controllers
  */
 class BinshopsAdminController extends Controller
 {
@@ -82,7 +82,7 @@ class BinshopsAdminController extends Controller
             'language_list' => $language_list,
             'selected_lang' => $language_id,
             'post' => $new_post,
-            'post_translation' => new \BinshopsBlog\Models\BinshopsPostTranslation(),
+            'post_translation' => new \AivstarBlog\Models\BinshopsPostTranslation(),
             'post_id' => -1
         ]);
     }

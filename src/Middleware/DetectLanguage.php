@@ -1,10 +1,10 @@
 <?php
 
-namespace BinshopsBlog\Middleware;
+namespace AivstarBlog\Middleware;
 
-use BinshopsBlog\Models\BinshopsConfiguration;
+use AivstarBlog\Models\BinshopsConfiguration;
 use Closure;
-use BinshopsBlog\Models\BinshopsLanguage;
+use AivstarBlog\Models\BinshopsLanguage;
 
 class DetectLanguage
 {

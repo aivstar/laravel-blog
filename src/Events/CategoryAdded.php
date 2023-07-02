@@ -1,16 +1,16 @@
 <?php
 
-namespace BinshopsBlog\Events;
+namespace AivstarBlog\Events;
 
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use BinshopsBlog\Models\BinshopsCategory;
-use BinshopsBlog\Models\BinshopsCategoryTranslation;
+use AivstarBlog\Models\BinshopsCategory;
+use AivstarBlog\Models\BinshopsCategoryTranslation;
 
 /**
  * Class CategoryAdded
- * @package BinshopsBlog\Events
+ * @package AivstarBlog\Events
  */
 class CategoryAdded
 {

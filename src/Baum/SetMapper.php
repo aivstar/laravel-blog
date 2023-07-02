@@ -1,16 +1,16 @@
 <?php
-namespace BinshopsBlog\Baum;
+namespace AivstarBlog\Baum;
 
 use \Closure;
 use Illuminate\Support\Contracts\ArrayableInterface;
-use BinshopsBlog\Baum\Node;
+use AivstarBlog\Baum\Node;
 
 class SetMapper {
 
   /**
   * Node instance for reference
   *
-  * @var \BinshopsBlog\Baum\Node
+  * @var \AivstarBlog\Baum\Node
   */
   protected $node = NULL;
 
@@ -22,9 +22,9 @@ class SetMapper {
   protected $childrenKeyName = 'children';
 
   /**
-   * Create a new \BinshopsBlog\Baum\SetBuilder class instance.
+   * Create a new \AivstarBlog\Baum\SetBuilder class instance.
    *
-   * @param   \BinshopsBlog\Baum\Node      $node
+   * @param   \AivstarBlog\Baum\Node      $node
    * @return  void
    */
   public function __construct($node, $childrenKeyName = 'children') {

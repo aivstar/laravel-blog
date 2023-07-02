@@ -1,6 +1,6 @@
 <?php
 
-namespace BinshopsBlog\Requests;
+namespace AivstarBlog\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -47,7 +47,7 @@ class AddNewCommentRequest extends FormRequest
             /** @var string $captcha_class */
             $captcha_class = config("binshopsblog.captcha.captcha_type");
 
-            /** @var \BinshopsBlog\Interfaces\CaptchaInterface $captcha */
+            /** @var \AivstarBlog\Interfaces\CaptchaInterface $captcha */
             $captcha = new $captcha_class;
 
             $return[$captcha->captcha_field_name()] = $captcha->rules();

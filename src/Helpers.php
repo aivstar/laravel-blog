@@ -1,11 +1,11 @@
 <?php
-namespace BinshopsBlog;
+namespace AivstarBlog;
 
 use \Session;
 
 /**
  * Class Helpers
- * @package BinshopsBlog
+ * @package AivstarBlog
  */
 class Helpers
 {

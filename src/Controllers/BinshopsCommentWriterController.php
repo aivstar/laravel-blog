@@ -1,22 +1,22 @@
 <?php
 
-namespace BinshopsBlog\Controllers;
+namespace AivstarBlog\Controllers;
 
 use App\Http\Controllers\Controller;
 use Auth;
-use BinshopsBlog\Captcha\CaptchaAbstract;
-use BinshopsBlog\Captcha\UsesCaptcha;
-use BinshopsBlog\Events\CommentAdded;
-use BinshopsBlog\Middleware\LoadLanguage;
-use BinshopsBlog\Middleware\UserCanManageBlogPosts;
-use BinshopsBlog\Models\BinshopsComment;
-use BinshopsBlog\Models\BinshopsPost;
-use BinshopsBlog\Models\BinshopsPostTranslation;
-use BinshopsBlog\Requests\AddNewCommentRequest;
+use AivstarBlog\Captcha\CaptchaAbstract;
+use AivstarBlog\Captcha\UsesCaptcha;
+use AivstarBlog\Events\CommentAdded;
+use AivstarBlog\Middleware\LoadLanguage;
+use AivstarBlog\Middleware\UserCanManageBlogPosts;
+use AivstarBlog\Models\BinshopsComment;
+use AivstarBlog\Models\BinshopsPost;
+use AivstarBlog\Models\BinshopsPostTranslation;
+use AivstarBlog\Requests\AddNewCommentRequest;
 
 /**
  * Class BinshopsCommentWriterController
- * @package BinshopsBlog\Controllers
+ * @package AivstarBlog\Controllers
  */
 class BinshopsCommentWriterController extends Controller
 {

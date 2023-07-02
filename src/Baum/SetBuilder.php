@@ -1,15 +1,15 @@
 <?php
-namespace BinshopsBlog\Baum;
+namespace AivstarBlog\Baum;
 
-use BinshopsBlog\Baum\Helpers\DatabaseHelper as DB;
-use BinshopsBlog\Baum\Node;
+use AivstarBlog\Baum\Helpers\DatabaseHelper as DB;
+use AivstarBlog\Baum\Node;
 
 class SetBuilder {
 
   /**
   * Node instance for reference
   *
-  * @var \BinshopsBlog\Baum\Node
+  * @var \AivstarBlog\Baum\Node
   */
   protected $node = NULL;
 
@@ -21,9 +21,9 @@ class SetBuilder {
   protected $bounds = array();
 
   /**
-   * Create a new \BinshopsBlog\Baum\SetBuilder class instance.
+   * Create a new \AivstarBlog\Baum\SetBuilder class instance.
    *
-   * @param   \BinshopsBlog\Baum\Node      $node
+   * @param   \AivstarBlog\Baum\Node      $node
    * @return  void
    */
   public function __construct($node) {
@@ -91,7 +91,7 @@ class SetBuilder {
   /**
    * Return all children for the specified node.
    *
-   * @param   BinshopsBlog\Baum\Node $node
+   * @param   AivstarBlog\Baum\Node $node
    * @return  Illuminate\Database\Eloquent\Collection
    */
   public function children($node) {
@@ -114,7 +114,7 @@ class SetBuilder {
   /**
    * Return an array of the scoped attributes of the supplied node.
    *
-   * @param   BinshopsBlog\Baum\Node $node
+   * @param   AivstarBlog\Baum\Node $node
    * @return  array
    */
   protected function scopedAttributes($node) {
@@ -133,7 +133,7 @@ class SetBuilder {
    * Return a string-key for the current scoped attributes. Used for index
    * computing when a scope is defined (acsts as an scope identifier).
    *
-   * @param   BinshopsBlog\Baum\Node $node
+   * @param   AivstarBlog\Baum\Node $node
    * @return  string
    */
   protected function scopedKey($node) {

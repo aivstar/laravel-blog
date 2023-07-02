@@ -118,7 +118,7 @@ php artisan serve
 
 您可以添加自己的验证码选项。
 
-如果要编写自己的实现，请创建自己的实现类 \BinshopsBlog\Interfaces\CaptchaInterface, 然后更新 config/binshopsblog.php 文件（更改captcha_type选项）。
+如果要编写自己的实现，请创建自己的实现类 \AivstarBlog\Interfaces\CaptchaInterface, 然后更新 config/binshopsblog.php 文件（更改captcha_type选项）。
 
 
 您需要实现三种方法：

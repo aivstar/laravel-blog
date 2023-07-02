@@ -1,10 +1,10 @@
 <?php
 
-namespace BinshopsBlog\Requests;
+namespace AivstarBlog\Requests;
 
 
 use Illuminate\Validation\Rule;
-use BinshopsBlog\Models\BinshopsCategory;
+use AivstarBlog\Models\BinshopsCategory;
 
 class UpdateBinshopsBlogCategoryRequest extends BaseBinshopsBlogCategoryRequest
 {

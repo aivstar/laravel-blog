@@ -1,10 +1,10 @@
-<?php namespace BinshopsBlog\Requests\Traits;
+<?php namespace AivstarBlog\Requests\Traits;
 
-use BinshopsBlog\Models\BinshopsCategory;
+use AivstarBlog\Models\BinshopsCategory;
 
 /**
  * Class HasCategoriesTrait
- * @package BinshopsBlog\Requests\Traits
+ * @package AivstarBlog\Requests\Traits
  */
 trait HasCategoriesTrait
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace BinshopsBlog\Models;
+namespace AivstarBlog\Models;
 
 use Cviebrock\EloquentSluggable\Sluggable;
-use BinshopsBlog\Laravel\Fulltext\Indexable;
+use AivstarBlog\Laravel\Fulltext\Indexable;
 use Illuminate\Database\Eloquent\Model;
-use BinshopsBlog\Interfaces\SearchResultInterface;
+use AivstarBlog\Interfaces\SearchResultInterface;
 
 class BinshopsPostTranslation extends Model implements SearchResultInterface
 {

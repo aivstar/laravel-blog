@@ -1,9 +1,9 @@
-<?php namespace BinshopsBlog\Captcha;
+<?php namespace AivstarBlog\Captcha;
 
 use Illuminate\Http\Request;
-use BinshopsBlog\Interfaces\CaptchaInterface;
-use BinshopsBlog\Models\BinshopsPost;
-use BinshopsBlog\Models\BinshopsPostTranslation;
+use AivstarBlog\Interfaces\CaptchaInterface;
+use AivstarBlog\Models\BinshopsPost;
+use AivstarBlog\Models\BinshopsPostTranslation;
 
 abstract class CaptchaAbstract implements CaptchaInterface
 {

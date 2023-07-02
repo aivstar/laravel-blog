@@ -1,4 +1,4 @@
-<?php namespace BinshopsBlog\Interfaces;
+<?php namespace AivstarBlog\Interfaces;
 
 interface SearchResultInterface
 {

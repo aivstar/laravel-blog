@@ -6,7 +6,7 @@ class CaptchaTest extends \Tests\TestCase
     public function testBasicCaptchaMethodsReturnCorrectType()
     {
 
-        $captcha = new \BinshopsBlog\Captcha\Basic();
+        $captcha = new \AivstarBlog\Captcha\Basic();
         $this->assertEquals(gettype($captcha->captcha_field_name()), "string");
         $this->assertEquals(gettype($captcha->view()), "string");
         $this->assertEquals(gettype($captcha->rules()), "array");
@@ -16,7 +16,7 @@ class CaptchaTest extends \Tests\TestCase
     public function testRuleCustomValidationFunctionReturnsCorrectly()
     {
 
-        $captcha = new \BinshopsBlog\Captcha\Basic();
+        $captcha = new \AivstarBlog\Captcha\Basic();
 
         foreach ($captcha->rules() as $rule) {
 

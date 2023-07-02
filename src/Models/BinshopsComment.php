@@ -1,10 +1,10 @@
 <?php
 
-namespace BinshopsBlog\Models;
+namespace AivstarBlog\Models;
 
 use App\User;
 use Illuminate\Database\Eloquent\Model;
-use BinshopsBlog\Scopes\BlogCommentApprovedAndDefaultOrderScope;
+use AivstarBlog\Scopes\BlogCommentApprovedAndDefaultOrderScope;
 
 class BinshopsComment extends Model
 {

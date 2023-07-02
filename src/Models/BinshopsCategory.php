@@ -1,8 +1,8 @@
 <?php
 
-namespace BinshopsBlog\Models;
+namespace AivstarBlog\Models;
 
-use BinshopsBlog\Baum\Node;
+use AivstarBlog\Baum\Node;
 
 class BinshopsCategory extends Node
 {
@@ -53,12 +53,12 @@ class BinshopsCategory extends Node
 
 //    public function parent()
 //    {
-//        return $this->belongsTo('BinshopsBlog\Models\BinshopsCategory', 'parent_id');
+//        return $this->belongsTo('AivstarBlog\Models\BinshopsCategory', 'parent_id');
 //    }
 //
 //    public function children()
 //    {
-//        return $this->hasMany('BinshopsBlog\Models\BinshopsCategory', 'parent_id');
+//        return $this->hasMany('AivstarBlog\Models\BinshopsCategory', 'parent_id');
 //    }
 //
 //    // recursive, loads all descendants

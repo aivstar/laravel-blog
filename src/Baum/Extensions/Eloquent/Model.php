@@ -1,10 +1,10 @@
 <?php
-namespace BinshopsBlog\Baum\Extensions\Eloquent;
+namespace AivstarBlog\Baum\Extensions\Eloquent;
 
 use Illuminate\Database\Eloquent\Model as BaseModel;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use BinshopsBlog\Baum\Extensions\Query\Builder as QueryBuilder;
+use AivstarBlog\Baum\Extensions\Query\Builder as QueryBuilder;
 
 abstract class Model extends BaseModel {
 

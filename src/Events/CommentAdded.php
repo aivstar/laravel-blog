@@ -1,16 +1,16 @@
 <?php
 
-namespace BinshopsBlog\Events;
+namespace AivstarBlog\Events;
 
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use BinshopsBlog\Models\BinshopsComment;
-use BinshopsBlog\Models\BinshopsPost;
+use AivstarBlog\Models\BinshopsComment;
+use AivstarBlog\Models\BinshopsPost;
 
 /**
  * Class CommentAdded
- * @package BinshopsBlog\Events
+ * @package AivstarBlog\Events
  */
 class CommentAdded
 {

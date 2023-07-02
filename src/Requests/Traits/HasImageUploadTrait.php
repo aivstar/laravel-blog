@@ -1,4 +1,4 @@
-<?php namespace BinshopsBlog\Requests\Traits;
+<?php namespace AivstarBlog\Requests\Traits;
 
 
 

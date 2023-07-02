@@ -1,25 +1,25 @@
 <?php
 
-namespace BinshopsBlog\Controllers;
+namespace AivstarBlog\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use BinshopsBlog\Events\CategoryAdded;
-use BinshopsBlog\Events\CategoryEdited;
-use BinshopsBlog\Events\CategoryWillBeDeleted;
-use BinshopsBlog\Helpers;
-use BinshopsBlog\Middleware\LoadLanguage;
-use BinshopsBlog\Middleware\UserCanManageBlogPosts;
-use BinshopsBlog\Models\BinshopsCategory;
-use BinshopsBlog\Models\BinshopsCategoryTranslation;
-use BinshopsBlog\Models\BinshopsLanguage;
-use BinshopsBlog\Requests\DeleteBinshopsBlogCategoryRequest;
-use BinshopsBlog\Requests\StoreBinshopsBlogCategoryRequest;
-use BinshopsBlog\Requests\UpdateBinshopsBlogCategoryRequest;
+use AivstarBlog\Events\CategoryAdded;
+use AivstarBlog\Events\CategoryEdited;
+use AivstarBlog\Events\CategoryWillBeDeleted;
+use AivstarBlog\Helpers;
+use AivstarBlog\Middleware\LoadLanguage;
+use AivstarBlog\Middleware\UserCanManageBlogPosts;
+use AivstarBlog\Models\BinshopsCategory;
+use AivstarBlog\Models\BinshopsCategoryTranslation;
+use AivstarBlog\Models\BinshopsLanguage;
+use AivstarBlog\Requests\DeleteBinshopsBlogCategoryRequest;
+use AivstarBlog\Requests\StoreBinshopsBlogCategoryRequest;
+use AivstarBlog\Requests\UpdateBinshopsBlogCategoryRequest;
 
 /**
  * Class BinshopsCategoryAdminController
- * @package BinshopsBlog\Controllers
+ * @package AivstarBlog\Controllers
  */
 class BinshopsCategoryAdminController extends Controller
 {
@@ -64,8 +64,8 @@ class BinshopsCategoryAdminController extends Controller
 
 
         return view("binshopsblog_admin::categories.add_category",[
-            'category' => new \BinshopsBlog\Models\BinshopsCategory(),
-            'category_translation' => new \BinshopsBlog\Models\BinshopsCategoryTranslation(),
+            'category' => new \AivstarBlog\Models\BinshopsCategory(),
+            'category_translation' => new \AivstarBlog\Models\BinshopsCategoryTranslation(),
             'category_tree' => $cat_list,
             'cat_roots' => $rootList,
             'language_id' => $language_id,

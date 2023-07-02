@@ -1,23 +1,23 @@
 <?php
 
-namespace BinshopsBlog\Controllers;
+namespace AivstarBlog\Controllers;
 
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
-use BinshopsBlog\Laravel\Fulltext\Search;
-use BinshopsBlog\Models\BinshopsCategoryTranslation;
+use AivstarBlog\Laravel\Fulltext\Search;
+use AivstarBlog\Models\BinshopsCategoryTranslation;
 use Illuminate\Http\Request;
-use BinshopsBlog\Captcha\UsesCaptcha;
-use BinshopsBlog\Middleware\DetectLanguage;
-use BinshopsBlog\Models\BinshopsCategory;
-use BinshopsBlog\Models\BinshopsLanguage;
-use BinshopsBlog\Models\BinshopsPost;
-use BinshopsBlog\Models\BinshopsPostTranslation;
+use AivstarBlog\Captcha\UsesCaptcha;
+use AivstarBlog\Middleware\DetectLanguage;
+use AivstarBlog\Models\BinshopsCategory;
+use AivstarBlog\Models\BinshopsLanguage;
+use AivstarBlog\Models\BinshopsPost;
+use AivstarBlog\Models\BinshopsPostTranslation;
 
 /**
  * Class BinshopsReaderController
  * All of the main public facing methods for viewing blog content (index, single posts)
- * @package BinshopsBlog\Controllers
+ * @package AivstarBlog\Controllers
  */
 class BinshopsReaderController extends Controller
 {

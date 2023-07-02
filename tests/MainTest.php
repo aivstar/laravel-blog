@@ -226,7 +226,7 @@ class MainTest extends \Tests\TestCase
         $response->assertStatus(302); // redirect
         $this->assertDatabaseHas('binshops_posts', $search_for_obj);
 
-        $justCreatedRow = \BinshopsBlog\Models\BinshopsPost::where("slug", $new_object_vals['slug'])->firstOrFail();
+        $justCreatedRow = \AivstarBlog\Models\BinshopsPost::where("slug", $new_object_vals['slug'])->firstOrFail();
 
 
         $new_object_vals['title'] = "New title " . str_random();
@@ -382,8 +382,8 @@ class MainTest extends \Tests\TestCase
 
         \Config::set('binshopsblog.comments.auto_approve_comments', false);
         \Config::set('binshopsblog.captcha.captcha_enabled', true);
-        \Config::set('binshopsblog.captcha.captcha_type', \BinshopsBlog\Captcha\Basic::class);
-        $captcha = new \BinshopsBlog\Captcha\Basic();
+        \Config::set('binshopsblog.captcha.captcha_type', \AivstarBlog\Captcha\Basic::class);
+        $captcha = new \AivstarBlog\Captcha\Basic();
         \Config::set('binshopsblog.captcha.basic_question', "a test question");
         \Config::set('binshopsblog.captcha.basic_answers', "answer1,answer2");
 
@@ -452,7 +452,7 @@ class MainTest extends \Tests\TestCase
         $admin_panel_url = config("binshopsblog.admin_prefix", "blog_admin");
         $new_object_vals = $this->generate_basic_blog_post_with_random_data();
 
-        $newblogpost = new \BinshopsBlog\Models\BinshopsPost;
+        $newblogpost = new \AivstarBlog\Models\BinshopsPost;
 
         $newblogpost->title=__METHOD__ . " " . time();
 
@@ -484,7 +484,7 @@ class MainTest extends \Tests\TestCase
         $admin_panel_url = config("binshopsblog.admin_prefix", "blog_admin");
         $new_object_vals = $this->generate_basic_blog_post_with_random_data();
 
-        $newblogpost = new \BinshopsBlog\Models\BinshopsPost;
+        $newblogpost = new \AivstarBlog\Models\BinshopsPost;
 
         $newblogpost->title=__METHOD__ . " " . time();
 
@@ -514,7 +514,7 @@ class MainTest extends \Tests\TestCase
         $admin_panel_url = config("binshopsblog.admin_prefix", "blog_admin");
         $new_object_vals = $this->generate_basic_blog_post_with_random_data();
 
-        $newblogpost = new \BinshopsBlog\Models\BinshopsPost;
+        $newblogpost = new \AivstarBlog\Models\BinshopsPost;
 
         $newblogpost->title=__METHOD__ . " " . time();
 
@@ -540,8 +540,8 @@ class MainTest extends \Tests\TestCase
 
         \Config::set('binshopsblog.comments.auto_approve_comments', false);
         \Config::set('binshopsblog.captcha.captcha_enabled', true);
-        \Config::set('binshopsblog.captcha.captcha_type', \BinshopsBlog\Captcha\Basic::class);
-        $captcha = new \BinshopsBlog\Captcha\Basic();
+        \Config::set('binshopsblog.captcha.captcha_type', \AivstarBlog\Captcha\Basic::class);
+        $captcha = new \AivstarBlog\Captcha\Basic();
         \Config::set('binshopsblog.captcha.basic_question', "a test question");
         \Config::set('binshopsblog.captcha.basic_answers', "answer1,answer2");
 
@@ -584,7 +584,7 @@ class MainTest extends \Tests\TestCase
         $this->assertDatabaseHas('binshops_comments', ['approved' => false, 'author_name' => $comment_detail['author_name']]);
 
 
-        $justAddedRow = \BinshopsBlog\Models\BinshopsComment::withoutGlobalScopes()->where('author_name', $comment_detail['author_name'])->firstOrFail();
+        $justAddedRow = \AivstarBlog\Models\BinshopsComment::withoutGlobalScopes()->where('author_name', $comment_detail['author_name'])->firstOrFail();
 
         $response = $this->get(route("binshopsblog.admin.comments.index"));
         $response->assertSee($justAddedRow->author_name);
@@ -647,7 +647,7 @@ class MainTest extends \Tests\TestCase
         $this->assertDatabaseHas('binshops_comments', ['approved' => false, 'author_name' => $comment_detail['author_name']]);
 
 
-        $justAddedRow = \BinshopsBlog\Models\BinshopsComment::withoutGlobalScopes()->where('author_name', $comment_detail['author_name'])->firstOrFail();
+        $justAddedRow = \AivstarBlog\Models\BinshopsComment::withoutGlobalScopes()->where('author_name', $comment_detail['author_name'])->firstOrFail();
 
         $response = $this->get(route("binshopsblog.admin.comments.index"));
         $response->assertSee($justAddedRow->author_name);
@@ -705,7 +705,7 @@ class MainTest extends \Tests\TestCase
             $this->assertDatabaseHas('binshops_comments', ['author_name' => $comment_detail['author_name']]);
 
 
-            $justAddedRow = \BinshopsBlog\Models\BinshopsComment::withoutGlobalScopes()->where('author_name', $comment_detail['author_name'])->firstOrFail();
+            $justAddedRow = \AivstarBlog\Models\BinshopsComment::withoutGlobalScopes()->where('author_name', $comment_detail['author_name'])->firstOrFail();
 
             // check the just added row exists...
             $response = $this->get(route("binshopsblog.admin.comments.index"));
@@ -760,7 +760,7 @@ class MainTest extends \Tests\TestCase
         $this->assertDatabaseHas('binshops_posts', $search_for_obj);
 
 
-        $justCreatedRow = \BinshopsBlog\Models\BinshopsPost::where("slug", $new_object_vals['slug'])->firstOrFail();
+        $justCreatedRow = \AivstarBlog\Models\BinshopsPost::where("slug", $new_object_vals['slug'])->firstOrFail();
         $id = $justCreatedRow->id;
         $delete_url = $admin_panel_url . "/delete_post/" . $id;
 
@@ -819,7 +819,7 @@ class MainTest extends \Tests\TestCase
 
 
         // get the just inserted row
-        $justCreatedRow = \BinshopsBlog\Models\BinshopsCategory::where("slug", $new_cat_vals['slug'])->firstOrFail();
+        $justCreatedRow = \AivstarBlog\Models\BinshopsCategory::where("slug", $new_cat_vals['slug'])->firstOrFail();
 
 
         // get the edit page (form)
@@ -871,7 +871,7 @@ class MainTest extends \Tests\TestCase
         $this->assertDatabaseHas('binshops_categories', $search_for_new_cat);
 
 
-        $justCreatedRow = \BinshopsBlog\Models\BinshopsCategory::where("slug", $new_cat_vals['slug'])->firstOrFail();
+        $justCreatedRow = \AivstarBlog\Models\BinshopsCategory::where("slug", $new_cat_vals['slug'])->firstOrFail();
         $id = $justCreatedRow->id;
 
         $delete_url = $admin_panel_url . "/categories/delete_category/$id";

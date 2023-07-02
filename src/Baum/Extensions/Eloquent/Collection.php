@@ -1,5 +1,5 @@
 <?php
-namespace BinshopsBlog\Baum\Extensions\Eloquent;
+namespace AivstarBlog\Baum\Extensions\Eloquent;
 
 use Illuminate\Database\Eloquent\Collection as BaseCollection;
 
@@ -8,7 +8,7 @@ class Collection extends BaseCollection {
   public function toHierarchy() {
     $dict = $this->getDictionary();
 
-    // Enforce sorting by $orderColumn setting in BinshopsBlog\Baum\Node instance
+    // Enforce sorting by $orderColumn setting in AivstarBlog\Baum\Node instance
     uasort($dict, function($a, $b){
         return ($a->getOrder() >= $b->getOrder()) ? 1 : -1;
     });

@@ -1,9 +1,9 @@
 <?php
 
-namespace BinshopsBlog\Laravel\Fulltext\Commands;
+namespace AivstarBlog\Laravel\Fulltext\Commands;
 
 use Illuminate\Console\Command;
-use BinshopsBlog\Laravel\Fulltext\Indexer;
+use AivstarBlog\Laravel\Fulltext\Indexer;
 
 class UnindexOne extends Command
 {

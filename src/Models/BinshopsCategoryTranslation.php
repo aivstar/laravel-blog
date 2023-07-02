@@ -1,6 +1,6 @@
 <?php
 
-namespace BinshopsBlog\Models;
+namespace AivstarBlog\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -2,15 +2,15 @@
 
 namespace AivstarBlog;
 
-use BinshopsBlog\Models\BinshopsPostTranslation;
+use AivstarBlog\Models\BinshopsPostTranslation;
 use Illuminate\Support\ServiceProvider;
-use BinshopsBlog\Models\BinshopsPost;
-use BinshopsBlog\Laravel\Fulltext\Commands\Index;
-use BinshopsBlog\Laravel\Fulltext\Commands\IndexOne;
-use BinshopsBlog\Laravel\Fulltext\Commands\UnindexOne;
-use BinshopsBlog\Laravel\Fulltext\ModelObserver;
-use BinshopsBlog\Laravel\Fulltext\Search;
-use BinshopsBlog\Laravel\Fulltext\SearchInterface;
+use AivstarBlog\Models\BinshopsPost;
+use AivstarBlog\Laravel\Fulltext\Commands\Index;
+use AivstarBlog\Laravel\Fulltext\Commands\IndexOne;
+use AivstarBlog\Laravel\Fulltext\Commands\UnindexOne;
+use AivstarBlog\Laravel\Fulltext\ModelObserver;
+use AivstarBlog\Laravel\Fulltext\Search;
+use AivstarBlog\Laravel\Fulltext\SearchInterface;
 
 class BinshopsBlogServiceProvider extends ServiceProvider
 {

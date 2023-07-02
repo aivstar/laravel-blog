@@ -1,8 +1,8 @@
-<?php namespace BinshopsBlog\Captcha;
+<?php namespace AivstarBlog\Captcha;
 
 /**
  * Class Basic
- * @package BinshopsBlog\Captcha
+ * @package AivstarBlog\Captcha
  */
 class Basic extends CaptchaAbstract
 {

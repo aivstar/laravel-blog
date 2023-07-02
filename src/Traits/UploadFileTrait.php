@@ -1,12 +1,12 @@
 <?php
 
-namespace BinshopsBlog\Traits;
+namespace AivstarBlog\Traits;
 
 use Illuminate\Http\UploadedFile;
-use BinshopsBlog\Events\UploadedImage;
-use BinshopsBlog\Models\BinshopsPost;
+use AivstarBlog\Events\UploadedImage;
+use AivstarBlog\Models\BinshopsPost;
 use File;
-use BinshopsBlog\Models\BinshopsPostTranslation;
+use AivstarBlog\Models\BinshopsPostTranslation;
 
 trait UploadFileTrait
 {

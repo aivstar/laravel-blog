@@ -112,9 +112,9 @@
 
                     {{--REPLACING THIS FILE WITH YOUR OWN LAYOUT FILE? Don't forget to include the following section!--}}
 
-                    @if(\BinshopsBlog\Helpers::has_flashed_message())
+                    @if(\AivstarBlog\Helpers::has_flashed_message())
                         <div class='alert alert-info'>
-                            <h3>{{\BinshopsBlog\Helpers::pull_flashed_message() }}</h3>
+                            <h3>{{\AivstarBlog\Helpers::pull_flashed_message() }}</h3>
                         </div>
                     @endif
 

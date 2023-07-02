@@ -1,11 +1,11 @@
-<?php namespace BinshopsBlog\Captcha;
+<?php namespace AivstarBlog\Captcha;
 
 /**
  * Trait UsesCaptcha
  *
  * For instantiating the config("binshopsblog.captcha.captcha_type") object.
  *
- * @package BinshopsBlog\Captcha
+ * @package AivstarBlog\Captcha
  */
 trait UsesCaptcha
 {

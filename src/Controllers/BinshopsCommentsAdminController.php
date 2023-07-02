@@ -1,19 +1,19 @@
 <?php
 
-namespace BinshopsBlog\Controllers;
+namespace AivstarBlog\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use BinshopsBlog\Events\CommentApproved;
-use BinshopsBlog\Events\CommentWillBeDeleted;
-use BinshopsBlog\Helpers;
-use BinshopsBlog\Middleware\LoadLanguage;
-use BinshopsBlog\Middleware\UserCanManageBlogPosts;
-use BinshopsBlog\Models\BinshopsComment;
+use AivstarBlog\Events\CommentApproved;
+use AivstarBlog\Events\CommentWillBeDeleted;
+use AivstarBlog\Helpers;
+use AivstarBlog\Middleware\LoadLanguage;
+use AivstarBlog\Middleware\UserCanManageBlogPosts;
+use AivstarBlog\Models\BinshopsComment;
 
 /**
  * Class BinshopsCommentsAdminController
- * @package BinshopsBlog\Controllers
+ * @package AivstarBlog\Controllers
  */
 class BinshopsCommentsAdminController extends Controller
 {

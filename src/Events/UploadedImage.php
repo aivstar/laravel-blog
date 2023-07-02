@@ -1,16 +1,16 @@
 <?php
 
-namespace BinshopsBlog\Events;
+namespace AivstarBlog\Events;
 
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use BinshopsBlog\Models\BinshopsPost;
-use BinshopsBlog\Models\BinshopsPostTranslation;
+use AivstarBlog\Models\BinshopsPost;
+use AivstarBlog\Models\BinshopsPostTranslation;
 
 /**
  * Class UploadedImage
- * @package BinshopsBlog\Events
+ * @package AivstarBlog\Events
  */
 class UploadedImage
 {

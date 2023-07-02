@@ -1,6 +1,6 @@
 <?php
 
-namespace BinshopsBlog\Scopes;
+namespace AivstarBlog\Scopes;
 
 use Illuminate\Database\Eloquent\Scope;
 use Illuminate\Database\Eloquent\Model;

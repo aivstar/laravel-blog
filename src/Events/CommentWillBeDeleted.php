@@ -1,15 +1,15 @@
 <?php
 
-namespace BinshopsBlog\Events;
+namespace AivstarBlog\Events;
 
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use BinshopsBlog\Models\BinshopsComment;
+use AivstarBlog\Models\BinshopsComment;
 
 /**
  * Class CommentWillBeDeleted
- * @package BinshopsBlog\Events
+ * @package AivstarBlog\Events
  */
 class CommentWillBeDeleted
 {

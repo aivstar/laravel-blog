@@ -1,13 +1,13 @@
 <?php
 
-namespace BinshopsBlog\Requests;
+namespace AivstarBlog\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use BinshopsBlog\Interfaces\BaseRequestInterface;
+use AivstarBlog\Interfaces\BaseRequestInterface;
 
 /**
  * Class BaseRequest
- * @package BinshopsBlog\Requests
+ * @package AivstarBlog\Requests
  */
 abstract class BaseRequest extends FormRequest implements BaseRequestInterface
 {

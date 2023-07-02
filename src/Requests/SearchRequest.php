@@ -1,6 +1,6 @@
 <?php
 
-namespace BinshopsBlog\Requests;
+namespace AivstarBlog\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

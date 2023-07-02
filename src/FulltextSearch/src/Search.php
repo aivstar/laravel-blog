@@ -1,13 +1,13 @@
 <?php
 
-namespace BinshopsBlog\Laravel\Fulltext;
+namespace AivstarBlog\Laravel\Fulltext;
 
 class Search implements SearchInterface
 {
     /**
      * @param string $search
      *
-     * @return \Illuminate\Database\Eloquent\Collection|\BinshopsBlog\Laravel\Fulltext\IndexedRecord[]
+     * @return \Illuminate\Database\Eloquent\Collection|\AivstarBlog\Laravel\Fulltext\IndexedRecord[]
      */
     public function run($search)
     {
@@ -20,7 +20,7 @@ class Search implements SearchInterface
      * @param $search
      * @param $class
      *
-     * @return \Illuminate\Database\Eloquent\Collection|\BinshopsBlog\Laravel\Fulltext\IndexedRecord[]
+     * @return \Illuminate\Database\Eloquent\Collection|\AivstarBlog\Laravel\Fulltext\IndexedRecord[]
      */
     public function runForClass($search, $class)
     {

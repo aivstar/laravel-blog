@@ -1,6 +1,6 @@
 <?php
 
-namespace BinshopsBlog\Baum\Extensions\Query;
+namespace AivstarBlog\Baum\Extensions\Query;
 
 use Illuminate\Database\Query\Builder as BaseBuilder;
 

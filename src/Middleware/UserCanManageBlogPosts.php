@@ -1,18 +1,18 @@
 <?php
 
-namespace BinshopsBlog\Middleware;
+namespace AivstarBlog\Middleware;
 
 use Closure;
 
 /**
  * Class UserCanManageBlogPosts
- * @package BinshopsBlog\Middleware
+ * @package AivstarBlog\Middleware
  */
 class UserCanManageBlogPosts
 {
 
     /**
-     * Show 401 error if \Auth::user()->canManageBinshopsBlogPosts() == false
+     * Show 401 error if \Auth::user()->canManageAivstarBlogPosts() == false
      * @param $request
      * @param Closure $next
      * @return mixed

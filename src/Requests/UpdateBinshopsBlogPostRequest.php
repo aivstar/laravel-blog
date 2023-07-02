@@ -1,12 +1,12 @@
 <?php
 
-namespace BinshopsBlog\Requests;
+namespace AivstarBlog\Requests;
 
 
 use Illuminate\Validation\Rule;
-use BinshopsBlog\Models\BinshopsPost;
-use BinshopsBlog\Requests\Traits\HasCategoriesTrait;
-use BinshopsBlog\Requests\Traits\HasImageUploadTrait;
+use AivstarBlog\Models\BinshopsPost;
+use AivstarBlog\Requests\Traits\HasCategoriesTrait;
+use AivstarBlog\Requests\Traits\HasImageUploadTrait;
 
 class UpdateBinshopsBlogPostRequest  extends BaseBinshopsBlogPostRequest {
 
