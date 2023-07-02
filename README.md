@@ -147,4 +147,4 @@ public function runCaptchaBeforeShowingPosts() : null
 - 您可能需要设置更高的内存限制，或上传较小的图像文件。这将取决于您的服务器。一旦服务器正确设置为处理较大的文件上传，就能上传大的（10mb+）jpg图像，而不会出现问题。
 
 ## Version History       
-- 1.0                   - First release
+- 0.1.6                   - First release
