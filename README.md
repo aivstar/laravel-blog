@@ -25,7 +25,7 @@ npm install && npm run build
 
 3- 执行以下两个命令，复制配置文件、迁移文件和查看文件
 
-`php artisan vendor:publish --provider="BinshopsBlog\BinshopsBlogServiceProvider"`
+`php artisan vendor:publish --provider="BinshopsBlog\BinshopsBlogServiceProvider" --force`
 
 4-  执行迁移命令创建表
 

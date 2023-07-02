@@ -62,6 +62,10 @@ class BinshopsBlogServiceProvider extends ServiceProvider
             __DIR__ . '/css/binshops-blog.css' => public_path('binshops-blog.css'),
             __DIR__ . '/css/admin-setup.css' => public_path('admin-setup.css'),
             __DIR__ . '/js/binshops-blog.js' => public_path('binshops-blog.js'),
+            //by aivstar
+            __DIR__ . '/Views/layouts' => base_path('resources/views/layouts'),
+
+
         ]);
 
 
