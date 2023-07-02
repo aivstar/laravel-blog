@@ -52,7 +52,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "BinshopsBlog\\BinshopsBlogServiceProvider"
+                "AivstarBlog\\BinshopsBlogServiceProvider"
             ],
             "aliases": {
             }
