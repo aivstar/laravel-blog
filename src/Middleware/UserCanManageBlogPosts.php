@@ -12,7 +12,7 @@ class UserCanManageBlogPosts
 {
 
     /**
-     * Show 401 error if \Auth::user()->canManageAivstarBlogPosts() == false
+     * Show 401 error if \Auth::user()->canManageBinshopsBlogPosts() == false
      * @param $request
      * @param Closure $next
      * @return mixed

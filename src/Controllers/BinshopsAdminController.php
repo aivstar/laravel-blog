@@ -20,7 +20,7 @@ use AivstarBlog\Models\BinshopsPostTranslation;
 use AivstarBlog\Models\BinshopsUploadedPhoto;
 use AivstarBlog\Requests\CreateBinshopsBlogPostRequest;
 use AivstarBlog\Requests\CreateBinshopsPostToggleRequest;
-use AivstarBlog\Requests\DeleteAivstarBlogPostRequest;
+use AivstarBlog\Requests\DeleteBinshopsBlogPostRequest;
 use AivstarBlog\Requests\UpdateBinshopsBlogPostRequest;
 use AivstarBlog\Traits\UploadFileTrait;
 
