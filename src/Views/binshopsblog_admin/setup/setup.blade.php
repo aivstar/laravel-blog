@@ -46,7 +46,7 @@
                                             <h4 class="info-text">Your default language will be set to English. You can add more language through the admin panel.</h4>
 
                                             <h6 class="info-text">
-                                                Version v9.3.x
+                                                Version v1.0.x
                                             </h6>
                                         </div>
 
@@ -108,7 +108,7 @@
 
     <div class="footer">
         <div class="container">
-            Created by BINSHOPS
+            Created by BINSHOPS and AIVSTAR
         </div>
     </div>
 </div>
