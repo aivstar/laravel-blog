@@ -116,7 +116,7 @@ return [
 
     'captcha' => [
         'captcha_enabled' => true, // true = we should use a captcha, false = turn it off. If comments are disabled this makes no difference.
-        'captcha_type' => \BinshopsBlogCaptcha\Basic::class, // this should be a class that implements the \AivstarBlog\Interfaces\CaptchaInterface interface
+        'captcha_type' => \AivstarBlog\Captcha\Basic::class, // this should be a class that implements the \AivstarBlog\Interfaces\CaptchaInterface interface
         'basic_question' => "What is the opposite of white?", // a simple captcha question to always ask (if captcha_type is set to 'basic'
         'basic_answers' => "black,dark", // comma separated list of possible answers. Don't worry about case.
     ],
