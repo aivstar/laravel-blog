@@ -1,12 +1,12 @@
 <div class='add_comment_area'>
-    <h5 class='text-center'>Add a comment</h5>
+    <h5 class='text-center'>添加评论</h5>
     <form method='post' action='{{route("binshopsblog.comments.add_new_comment",[app('request')->get('locale'),$post->slug])}}'>
         @csrf
 
 
         <div class="form-group ">
 
-            <label id="comment_label" for="comment">Your Comment </label>
+            <label id="comment_label" for="comment">你的评论 </label>
                     <textarea
                             class="form-control"
                             name='comment'
@@ -25,7 +25,7 @@
 
                     <div class='col'>
                         <div class="form-group ">
-                            <label id="author_name_label" for="author_name">Your Name </label>
+                            <label id="author_name_label" for="author_name">名称 </label>
                             <input
                                     type='text'
                                     class="form-control"
@@ -40,8 +40,8 @@
                     @if(config("binshopsblog.comments.ask_for_author_email"))
                         <div class='col'>
                             <div class="form-group">
-                                <label id="author_email_label" for="author_email">Your Email
-                                    <small>(won't be displayed publicly)</small>
+                                <label id="author_email_label" for="author_email">Email
+                                    <small>(Email不会公开)</small>
                                 </label>
                                 <input
                                         type='email'
@@ -60,8 +60,8 @@
                 @if(config("binshopsblog.comments.ask_for_author_website"))
                     <div class='col'>
                         <div class="form-group">
-                            <label id="author_website_label" for="author_website">Your Website
-                                <small>(Will be displayed)</small>
+                            <label id="author_website_label" for="author_website">网址
+                                <small>(将显示在评论中)</small>
                             </label>
                             <input
                                     type='url'
@@ -79,7 +79,7 @@
 
 
         @if($captcha)
-            {{--Captcha is enabled. Load the type class, and then include the view as defined in the captcha class --}}
+            {{--验证码已启用。加载类型类，然后包括验证码类中定义的视图 --}}
             @include($captcha->view())
         @endif
 

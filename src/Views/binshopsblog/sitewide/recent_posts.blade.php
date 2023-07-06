@@ -1,4 +1,4 @@
-<h5>Recent Posts</h5>
+<h5>最近的帖子</h5>
 <ul class="nav">
     @foreach(\AivstarBlog\Models\BinshopsPost::orderBy("posted_at","desc")->limit(5)->get() as $post)
         <li class="nav-item">

@@ -10,8 +10,8 @@
 
     @if(\Auth::check() && \Auth::user()->canManageBinshopsBlogPosts())
          {{--is logged in + canManageBinshopsBlogPosts() == true, so show a detailed error--}}
-        <div class='alert alert-danger'>Custom blog post blade view file
-                        (<code>{{$post->full_view_file_path()}}</code>) not found. <a
+        <div class='alert alert-danger'>自定义视图文件
+                        (<code>{{$post->full_view_file_path()}}</code>) 找不到. <a
                     href='https://github.com/binshops/laravel-blog'
                     target='_blank'>See Laravel Blog Package help here</a>.
                     </div>
@@ -19,6 +19,6 @@
     @else
         {{--is not logged in, or User::canManageBinshopsBlogPosts() for current user == false--}}
         {{--show basic error message--}}
-        <div class='alert alert-danger'>Sorry, but there is an error showing that blog post. Please come back later.</div>
+        <div class='alert alert-danger'>对不起，显示该博文时出现了错误。请稍后再来。</div>
     @endif
 @endif

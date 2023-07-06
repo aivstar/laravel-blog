@@ -1,6 +1,6 @@
 @if (isset($errors) && count($errors))
     <div class="alert alert-danger " style='max-width:500px;margin-left:auto;margin-right:auto;'>
-        <strong>Sorry, but there was an error:</strong>
+        <strong>对不起，但有一个错误:</strong>
         <ul>
             @foreach($errors->all() as $error)
                 <li>{{ $error }}</li>

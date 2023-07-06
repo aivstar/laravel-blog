@@ -1,4 +1,4 @@
-<h5>Post Categories</h5>
+<h5>帖子分类</h5>
 <ul class="nav">
     @foreach(\AivstarBlog\Models\BinshopsCategory::orderBy("category_name")->limit(200)->get() as $category)
         <li class="nav-item">

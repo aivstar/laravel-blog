@@ -7,7 +7,7 @@
             {{$comment->author()}}
 
             @if(config("binshopsblog.comments.ask_for_author_website") && $comment->author_website)
-                (<a href='{{$comment->author_website}}' target='_blank' rel='noopener'>website</a>)
+                (<a href='{{$comment->author_website}}' target='_blank' rel='noopener'>网址</a>)
             @endif
 
             <span class="float-right" title='{{$comment->created_at}}'><small>{{$comment->created_at->diffForHumans()}}</small></span>
@@ -22,12 +22,11 @@
 
 
 @empty
-    <div class='alert alert-info'>No comments yet! Why don't you be the first?</div>
+    <div class='alert alert-info'>还没有评论! 成为第一个？</div>
 @endforelse
 
 @if(count($comments)> config("binshopsblog.comments.max_num_of_comments_to_show",500) - 1)
-    <p><em>Only the first {{config("binshopsblog.comments.max_num_of_comments_to_show",500)}} comments are
-            shown.</em>
+    <p><em>只在第一个 {{config("binshopsblog.comments.max_num_of_comments_to_show",500)}} 评论显示。</em>
     </p>
 @endif
 

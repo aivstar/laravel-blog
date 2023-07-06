@@ -1,4 +1,4 @@
-<h5>Random Posts</h5>
+<h5>随机帖子</h5>
 <ul class="nav">
     @foreach(\AivstarBlog\Models\BinshopsPost::inRandomOrder()->limit(5)->get() as $post)
         <li class="nav-item">

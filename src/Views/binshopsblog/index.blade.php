@@ -9,12 +9,12 @@
     <div class='col-sm-12 binshopsblog_container'>
         @if(\Auth::check() && \Auth::user()->canManageBinshopsBlogPosts())
             <div class="text-center">
-                <p class='mb-1'>You are logged in as a blog admin user.
+                <p class='mb-1'>你是管理员。
                     <br>
                     <a href='{{route("binshopsblog.admin.index")}}'
                        class='btn border  btn-outline-primary btn-sm '>
                         <i class="fa fa-cogs" aria-hidden="true"></i>
-                        Go To Blog Admin Panel</a>
+                        后台管理</a>
                 </p>
             </div>
         @endif
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <h6>Blog Categories</h6>
+                <h6>分类</h6>
                 <ul class="binshops-cat-hierarchy">
                     @if($categories)
                         @include("binshopsblog::partials._category_partial", [
@@ -67,7 +67,7 @@
     'routeWithoutLocale' => $routeWithoutLocale
     ])
                     @else
-                        <span>No Categories</span>
+                        <span>无分类</span>
                     @endif
                 </ul>
             </div>
