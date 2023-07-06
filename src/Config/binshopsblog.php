@@ -1,171 +1,169 @@
 <?php
 
-//config for binshops/laravel-blogger
+//Aivstar/laravel-blogger的配置
 
 return [
     'default_language' => 'en',
 
-    //Your custom User model
-    //Change it to \App\User::class for previous laravel versions
-    'user_model'=>\App\Models\User::class,
+    //你的自定义用户模块
+    //旧版laravel，请把它改成\App\User::class
+    'user_'=>\App\Models\User::class,
 
-    // reading progress bar is the bar which shows on top of your post when you are scrolling down the page. You can disable this feature if you want
+    // reading progress bar 是当你向下滚动页面时，显示在你的文章顶部的条形图。 可以禁用这个功能。
     'reading_progress_bar' => true,
 
-    'include_default_routes' => true, // set to false to not include routes.php for BinshopsReaderController and admin related routes. Default: true. If you disable this, you will have to manually copy over the data from routes.php and add it to your web.php.
+    'include_default_routes' => true, // 设置为false，routes.php里不包括BinshopsReaderController和管理员相关的路由。默认：true。如果禁用它，需要手动复制routes.php中的数据并将其添加到web.php中。
 
-    'blog_prefix' => "blog", // used in routes.php. If you want to your http://yoursite.com/latest-news (or anything else), then enter that here. Default: blog
-    'admin_prefix' => "blog_admin", // similar to above, but used for the admin panel for the blog. Default: blog_admin
+    'blog_prefix' => "blog", // 仅在routes.php中使用。. 如果你想把你的首页地址改成类似 http://yoursite.com/latest-news (或其他后缀), 在此修改. 默认是: blog
+    'admin_prefix' => "blog_admin", // 与上面类似，此为后台管理面板地址。默认是: blog_admin
 
-    'use_custom_view_files' => false, // set to false to disable the use of being able to make blog posts include a view from resources/views/custom_blog_posts/*.blade.php. Default: false. Set to true to use this feature. Default: false
+    'use_custom_view_files' => false, // 是否使用resources/views/custom_blog_posts/*.blade.php的视图。设置为 "true" 启用。默认值是：false
 
-    'per_page' => 10, // how many posts to show per page on the blog index page. Default: 10
-
-
-    'image_upload_enabled' => true, // true or false, if image uploading is allowed.
-    'blog_upload_dir' => "blog_images", // this should be in public_path() (i.e. /public/blog_images), and should be writable
+    'per_page' => 10, // 在索引页上每页显示的帖子数量。默认值是：10
 
 
-    'memory_limit' => '2048M', // This is used when uploading images :
+    'image_upload_enabled' => true, // 是否允许上传图片.
+    'blog_upload_dir' => "blog_images", // 图片上传目录，应该在public_path()中（即/public/blog_images），并且应该是可写的。
+
+
+    'memory_limit' => '2048M', // 图片上传大小限制 :
     //                              @ini_set('memory_limit', config("binshopsblog.memory_limit"));
-    //                            See PHP.net for detailso
-    //                            Set to false to not set any value.
+    //                            详见PHP.net。
+    //                            设置为false则不设置任何值。
 
 
-    //if true it will echo out  (with {!! !!}) the blog post with NO escaping! This is not safe if you don't trust your blog post writers! Understand the risks by leaving this to true
-    // (you should disable this (set to false) if you don't trust your blog writers).
-    // This will apply to all posts (past and future).
-    // Do not set to true if you don't trust your blog post writers. They could put in any HTML or JS code.
-    'echo_html' => true, // default true
+    //设置为true将无转义直接输出文章 (with {!! !!}) !发布者可以放入任何HTML或JS代码。 如果你不信任发布者，这是危险的！ 
+    // (如果你不信任发布者，应该禁用这个功能。设置为false).
+    // 这适用于所有帖子 (包括已发布的和以后发布的).
+    'echo_html' => true, // 默认值是： true
 
-    // If strip_html is true, it'll run strip_tags() before escaping and echoing.
-    // It doesn't add any security advantage, but avoids any html tags appearing if you have disabled echoing plain html.
-    //  Only works if echo_html is false.
-    'strip_html' => false, // Default: false.
+    // 如果 strip_html 为 true, 它将在转义和输出之前运行 strip_tags()。
+    // 这不会增加安全，但如果你禁用了echo_html，此设置可以避免出现任何HTML标签。
+    // 只有在echo_html为false时才生效。
+    'strip_html' => false, // 默认值是：false.
 
-    //  Only works if echo_html if false. If auto_nl2br is true, the output will be run through nl2br after escaping.
-    'auto_nl2br' => true, // Default: true.
+    //  只有在echo_html为false时才生效。如果auto_nl2br为true，输出将在转义后通过nl2br运行。
+    'auto_nl2br' => true, // 默认值是： true.
 
-    // use the ckeditor WYWIWYG (rich text editor) for formatting your HTML blog posts.
-    // This will load scripts from https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js
-    // echo_html must be set to true for this to have an effect.
-    'use_wysiwyg' => true, // Default: true
+    // 使用ckeditor WYWIWYG（富文本编辑器）来编辑你的HTML文章
+    // 这将加载来自https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js的脚本
+    // echo_html必须设置为 "true "才会生效。
+    'use_wysiwyg' => true, // 默认值是： true
 
 
-    'image_quality' => 80, // what image quality to use when saving images. higher = better + bigger sizes. Around 80 is normal.
+    'image_quality' => 80, // 保存图像时使用什么样的图像质量。higher = better + bigger 的尺寸。80左右是正常的。
 
 
     'image_sizes' => [
 
-        // if you set 'enabled' to false, it will clear any data for that field the next time any row is updated. However it will NOT delete the .jpg file on your file server.
-        // I recommend that you only change the enabled field before any images have been uploaded!
+        // 如果你把 'enabled' 设置为 false, 它将在下次更新任何行时清除该字段的所有数据。但是，它不会删除你的文件服务器上的.jpg文件。
+        // 建议只在上传图片之前改变此设置!
 
-        // Also, if you change the w/h (which are obviously in pixels :) ), it won't change any previously uploaded images.
+        // 另外，如果你改变 w/h (以像素为单位), 它不会改变先前上传的图片.
 
-        // There must be only three sizes - image_large, image_medium, image_thumbnail.
+        // 只有三种尺寸 - image_large, image_medium, image_thumbnail.
 
 
-        'image_large' => [ // this key must start with 'image_'. This is what the DB column must be named
-            'w' => 1000, // width in pixels
-            'h' => 700, //height
-            'basic_key' => "large", // same as the main key, but WITHOUT 'image_'.
-            'name' => "Large", // description, used in the admin panel
-            'enabled' => true, // see note above
-            'crop' => true, // if true then we will crop and resize to exactly w/h. If false then it will maintain proportions, with a max width of 'w' and max height of 'h'
+        'image_large' => [ // 这个键必须以'image_'开头。 必须是已命名的数据列
+            'w' => 1000, // 宽度，以像素为单位
+            'h' => 700, //高度
+            'basic_key' => "large", // 与主键相同，但没有'image_'。
+            'name' => "Large", // 在管理面板上显示的名称
+            'enabled' => true, // 见上面注释
+            'crop' => true, // 如果为 true 那么将裁剪和调整大小，使之正好为w/h。 如果为 false 那么将保持比例缩放，最大宽度为'w'，最大高度为'h'。
         ],
-        'image_medium' => [ // this key must start with 'image_'. This is what the DB column must be named
-            'w' => 600, // width in pixels
-            'h' => 400, //height
-            'basic_key' => "medium",// same as the main key, but WITHOUT 'image_'.
-            'name' => "Medium",// description, used in the admin panel
-            'enabled' => true, // see note above
-            'crop' => true, // if true then we will crop and resize to exactly w/h. If false then it will maintain proportions, with a max width of 'w' and max height of 'h'. If you use these images as part of your website template then you should probably have this to true.
+        'image_medium' => [ // 这个键必须以'image_'开头。 必须是已命名的数据列
+            'w' => 600, // 宽度，以像素为单位
+            'h' => 400, //高度
+            'basic_key' => "medium",// 与主键相同，但没有'image_'。
+            'name' => "Medium",// 在管理面板上显示的名称
+            'enabled' => true, // 见上面注释
+            'crop' => true, // 如果为 true 那么将裁剪和调整大小，使之正好为w/h。 如果为 false 那么将保持比例缩放，最大宽度为'w'，最大高度为'h'。 如果使用这些图片作为网站模板的一部分，那么你应该把这设置为 true 。
         ],
-        'image_thumbnail' => [ // this key must start with 'image_'. This is what the DB column must be named
-            'w' => 150, // width in pixels
-            'h' => 150, //height
-            'basic_key' => "thumbnail",// same as the main key, but WITHOUT 'image_'.
-            'name' => "Thumbnail",// description, used in the admin panel
-            'enabled' => true, // see note above
+        'image_thumbnail' => [ // 这个键必须以'image_'开头。 必须是已命名的数据列
+            'w' => 150, // 宽度，以像素为单位
+            'h' => 150, //高度
+            'basic_key' => "thumbnail",// 与主键相同，但没有'image_'。
+            'name' => "Thumbnail",// 在管理面板上显示的名称
+            'enabled' => true, // 见上面注释
         ],
 
-        // you can add more fields here, but make sure that you create the relevant database columns too!
-        // They must be in the same format as the default ones - image_xxxxx (and this db column must exist on the binshops_posts table)
-
+        // 你可以添加更多的字段，但要确保数据库里创建了相关的数据列！
+        // 它们的格式必须与默认格式相同--image_xxxxx（而且这个数据列必须存在于binshops_posts表中）。
         /*
-        'image_custom_example_size' => [ // << MAKE A DB COLUM WITH THIS NAME.
-                                         //   You can name it whatever you want, but it must start with image_
-            'w' => 123,                  // << DEFINE YOUR CUSTOM WIDTH/HEIGHT
+        'image_custom_example_size' => [ // << 用这个名字创建数据列。.
+                                         //   你可以给它起任何名字，但它必须以image_开头。
+            'w' => 123,                  // << 自定义宽度/高度
             'h' => 456,
             'basic_key' =>
-                  "custom_example_size", // << THIS SHOULD BE THE SAME AS THE KEY, BUT WITHOUT THE image_
-            'name' => "Test",            // A HUMAN READABLE NAME
-            'enabled' => true,           // see note above about enabled/disabled
+                  "custom_example_size", // << 这应该与主键相同，但没有'image_'。
+            'name' => "Test",            // 在管理面板上显示的名称
+            'enabled' => true,           // 见上面关于启用/禁用的说明
             ],
         */
-        // Create the custom db table by doing
+        // 通过以下方式创建自定义数据库表
         //  php artisan make:migration --table=binshops_posts AddCustomBlogImageSize
-        //   then adding in the up() method:
+        //   然后在 up() 方法中添加：
         //       $table->string("image_custom_example_size")->nullable();
-        //    and in the down() method:
+        //   和 down() 方法中：
         //        $table->dropColumn("image_custom_example_size"); for the down()
-        // then run
+        // 然后运行
         //   php artisan migrate
     ],
 
 
     'captcha' => [
-        'captcha_enabled' => true, // true = we should use a captcha, false = turn it off. If comments are disabled this makes no difference.
-        'captcha_type' => \AivstarBlog\Captcha\Basic::class, // this should be a class that implements the \AivstarBlog\Interfaces\CaptchaInterface interface
-        'basic_question' => "What is the opposite of white?", // a simple captcha question to always ask (if captcha_type is set to 'basic'
-        'basic_answers' => "black,dark", // comma separated list of possible answers. Don't worry about case.
+        'captcha_enabled' => true, // true 开启验证码, false 禁用验证码. 在评论功能启用时生效.
+        'captcha_type' => \AivstarBlog\Captcha\Basic::class, // 这是一个实现AivstarBlog\Interfaces\CaptchaInterface 接口类。
+        'basic_question' => "What is the opposite of white?", // 一个简单的验证码问题 (如果验证码类型被设置为 'basic'
+        'basic_answers' => "black,dark", // 逗号分隔的验证码答案列表。 不区分大小写.
     ],
 
-    ////////// comments:
+    ////////// 评论:
 
     'comments' => [
 
 
-        // What type (if any) of comments/comment form to show.
-        // options:
-        //      'built_in' (default, uses own database for comments),
-        //      'disqus' (uses https://disqus.com/, please enter further config options below),
-        //      'custom' (will load binshopsblog::partials.custom_comments, which you can copy to your vendor view dir to customise
-        //      'disabled' (turn comments off)
-        'type_of_comments_to_show' => 'built_in', // default: built_in
+        // 使用什么类型（如果有的话）的评论/评论表。
+        // 选项:
+        //      'built_in' (默认值，使用数据库评论数据),
+        //      'disqus' (使用https://disqus.com/，请在下面输入进一步的配置选项),
+        //      'custom' (将加载binshopsblog::partials.custom_comments模块，你可以将其复制到 vendor view 目录下自定义
+        //      'disabled' (关闭评论)
+        'type_of_comments_to_show' => 'built_in', // 默认值: built_in
 
-        'max_num_of_comments_to_show' => 1000, // max num of comments to show on a single blog post. Set to a lower number for smaller page sizes. No comment pagination is built in yet.
+        'max_num_of_comments_to_show' => 1000, // 在一篇文章上显示的最大评论数。最好设置为较小的数值。目前还没有内置的评论分页功能。
 
-        // should we save the IP address in the database?
-        'save_ip_address' => true, // Default: true
-
-
-        //should comments appear straight away on the site (set this to true)? or wait for approval (set to false)
-        'auto_approve_comments' => false, // default: false
+        // 是否在数据库中保存IP地址?
+        'save_ip_address' => true, // 默认值: true
 
 
-        'save_user_id_if_logged_in' => true, // if user is logged in, should we save that user id? (if false it will always ask for an author name, which the commenter can provide
+        //是否审核评论？ (设置为 false 时需审核)
+        'auto_approve_comments' => false, // 默认值: false
 
-        'user_field_for_author_name' => "name", // what field on your User model should we use when echoing out the author name? By default this should be 'name', but maybe you have it set up to use 'username' etc.
 
-        'ask_for_author_email' => true, // show 'author email' on the form ?
-        'require_author_email' => false, // require an email (make sure ask_for_author_email is true if you want to use this)
-        'ask_for_author_website' => true, // show 'author website' on the form, show the link when viewing the comment
+        'save_user_id_if_logged_in' => true, // 是否保存已登录用户ID？(如果设置为 false 每次登录都将要求提供名字。）
+
+        'user_field_for_author_name' => "name", // 作者名称显示用户模块上的 'name'或者 'username' 字段.
+
+        'ask_for_author_email' => true, // 评论是否显示 email 输入框？
+        'require_author_email' => false, //  email是否必填项 ( ask_for_author_email 需同时设置为设置为 true  )
+        'ask_for_author_website' => true, // 评论是否显示 "作者网站"输入框 ，在查看评论时显示链接
 
         'disqus' => [
 
-            // only applies if comments.type_of_comments_to_show is set to 'disqus'
-//              The following config option can be found by looking for the following line on the embed code of your disqus code:
+            //  只有当type_of_comments_to_show被设置为'disqus'时才适用。
+//              可在你的disqus嵌入代码上找到以下配置选项：
 //                          s.src = 'https://yourusername_or_sitename.disqus.com/embed.js';
 //
-//             You must enter the whole url (but not the "s.src = '" part!)
-            'src_url' => "https://GET_THIS_FROM_YOUR_EMBED_CODE.disqus.com/embed.js", // enter the url here, from the html snippet disqus provides
+//             你必须输入完整网址 (但不要输入 "s.src = '"部分！)
+            'src_url' => "https://GET_THIS_FROM_YOUR_EMBED_CODE.disqus.com/embed.js", // 在这里输入disqus提供的html网址。
 
         ],
     ],
 
     'search' => [
-        'search_enabled' => true, //you can easily turn off search functionality
+        'search_enabled' => true, //你可以轻松关闭搜索功能
 
         'limit-results'=> 50,
         'enable_wildcards' => true,
@@ -175,6 +173,6 @@ return [
         ],
     ],
 
-    //Shows full text of post in listing pages like search result page or category page. Now it shows a preview
+    //在搜索结果页或分类页等列表页中显示帖子的全文。现在它显示的是预览
     'show_full_text_at_list' => true,
 ];
